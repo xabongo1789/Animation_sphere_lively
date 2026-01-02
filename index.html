@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Matrix - Ultrawide OLED</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- Import Map for Three.js (using Unpkg for simplicity, can be swapped for local) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- The canvas will be created by the MainScene or Controller -->
+
+    <script type="module">
+        import IndexController from './src/controllers/IndexController.js';
+
+        // Start the application
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = new IndexController();
+            app.init();
+        });
+    </script>
+</body>
+
+</html>
